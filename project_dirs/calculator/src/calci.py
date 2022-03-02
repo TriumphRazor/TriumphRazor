@@ -1,0 +1,8 @@
+""" This module depicts the calculator file """
+
+
+def cal():
+    print("U have created calculator example ")
+
+
+cal()
