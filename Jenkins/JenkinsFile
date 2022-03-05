@@ -25,6 +25,7 @@ pipeline {
             steps {
                 echo 'Deploying it gently...'
                 python calci.py
+                }
             }
         }
     }
