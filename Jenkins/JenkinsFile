@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     if (fileExists('calci.py') == false) {
-                        unstable('Code file not found!')
+                        echo"Code file not found!"
                     }
                 }
             }
@@ -21,12 +21,10 @@ pipeline {
         // 3. Dummy deploy
         // Print a message (only done if the build is stable)
         stage ('Deploy') {
-            when { not { equals expected: 'UNSTABLE'
             steps {
                 echo 'Deploying it gently...'
                 python calci.py
                 }
             }
         }
-    }
 }
