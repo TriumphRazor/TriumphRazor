@@ -12,9 +12,12 @@ pipeline {
         stage ('Build') {
             steps {
                 script {
-                    if (fileExists('calci.py') == false) {
-                        echo"Code file not found!"
+                if (fileExists('calci.py')) {
+                        echo 'Yes'
                     }
+                else {
+                        echo"Code file not found!"
+                     }
                 }
             }
         }
