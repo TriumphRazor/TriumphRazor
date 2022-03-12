@@ -12,7 +12,7 @@ pipeline {
         stage ('Build') {
             steps {
                 script {
-                if (fileExists('calci.py')) {
+                if (fileExists('project_dirs/calculator/src/calci.py')) {
                         echo 'Yes'
                     }
                 else {
@@ -26,7 +26,7 @@ pipeline {
         stage ('Deploy') {
             steps {
                 echo 'Deploying it gently...'
-                python calci.py
+                sh 'python calci.py'
                 }
             }
         }
