@@ -29,7 +29,7 @@ pipeline {
                 sh 'python -V'
                 sh 'alias python=python3'
                 sh 'python --version'
-                sh 'python calci.py'
+                sh 'python3 calci.py'
                 }
             }
         }
