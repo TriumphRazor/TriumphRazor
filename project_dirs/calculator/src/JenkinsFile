@@ -27,6 +27,7 @@ pipeline {
             steps {
                 echo 'Deploying it gently...'
                 sh 'python -V'
+                sh 'alias python=python3'
                 sh 'python --version'
                 sh 'python calci.py'
                 }
