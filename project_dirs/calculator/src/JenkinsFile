@@ -26,6 +26,8 @@ pipeline {
         stage ('Deploy') {
             steps {
                 echo 'Deploying it gently...'
+                sh 'python -V'
+                sh 'python --version'
                 sh 'python calci.py'
                 }
             }
