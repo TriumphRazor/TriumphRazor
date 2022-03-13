@@ -12,7 +12,7 @@ pipeline {
         stage ('Build') {
             steps {
                 script {
-                DIR_PATH = 'project_dirs/$folder_name/src/$file_name.py'
+                DIR_PATH = 'TriumphRazor/project_dirs/$folder_name/src/$file_name.py'
                 if (fileExists(DIR_PATH)) {
                         echo 'Yes'
                     }
