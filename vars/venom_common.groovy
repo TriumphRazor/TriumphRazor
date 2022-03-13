@@ -8,7 +8,7 @@ def call(String component_name){
             timestamps()
         }
         environment {
-            COMPONENT_NAME = "${component_name}"
+            COMPONENT_NAME = "project_dirs/${component_name}"
         }
 
         stages {
@@ -23,7 +23,7 @@ def call(String component_name){
 
                 steps {
                     script {
-                        linters "${COMPONENT_NAME}"
+                        venom_linters "${COMPONENT_NAME}"
                     }
                 }
             }

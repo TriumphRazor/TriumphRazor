@@ -2,7 +2,7 @@
 
 def call(String COMPONENT_NAME) {
     UNIT_TEST_RESULT = sh (
-        script: 'pytest ${COMPONENT_NAME}/ -vv -p -s no:warnings',
+        script: 'pytest project_dirs/${COMPONENT_NAME}/ -vv -p -s no:warnings',
         returnStdout: true
     )
     println "${UNIT_TEST_RESULT}"
