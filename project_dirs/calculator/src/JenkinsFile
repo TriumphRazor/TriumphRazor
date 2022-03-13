@@ -2,7 +2,6 @@ pipeline {
     agent any
     environment {
         PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
-        export PATH
       }
     // We split the work into 3 stages:
     stages {
