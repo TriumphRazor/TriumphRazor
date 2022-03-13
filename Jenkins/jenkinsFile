@@ -28,6 +28,7 @@ pipeline {
             steps {
                 echo 'Deploying it gently...'
                 sh 'python -V'
+                sh' python3 configs/configs.py'
                 sh 'python3 project_dirs/$folder_name/src/$file_name.py'
                 }
             }
