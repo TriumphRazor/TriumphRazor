@@ -35,7 +35,7 @@ pipeline {
                 echo 'Deploying it gently...'
                 sh 'python -V'
                 sh 'python --version'
-                sh 'python3 calci.py'
+                sh 'python3 project_dirs/calculator/src/calci.py'
                 }
             }
         }
