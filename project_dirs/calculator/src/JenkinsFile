@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
-      }
     // We split the work into 3 stages:
     stages {
         // 1. Checkout the files from Git
@@ -15,10 +12,6 @@ pipeline {
         stage ('Build') {
             steps {
                 script {
-                echo "PATH is: $PATH"
-                sh '''
-                echo PATH is: $PATH
-                '''
                 if (fileExists('project_dirs/calculator/src/calci.py')) {
                         echo 'Yes'
                     }
@@ -34,7 +27,6 @@ pipeline {
             steps {
                 echo 'Deploying it gently...'
                 sh 'python -V'
-                sh 'python --version'
                 sh 'python3 project_dirs/calculator/src/calci.py'
                 }
             }
