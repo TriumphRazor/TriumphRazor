@@ -1,0 +1,5 @@
+sonar-scanner \
+  -Dsonar.projectKey=TriumphRazor \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=a4aa548c3d96ade2cf39e74941939b72c742dcfb
