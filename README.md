@@ -10,7 +10,7 @@ You can click the Preview link to take a look at your changes.
 --->
 
 
-Unit test coverage tests
+Unit test coverage tests -  command line
 
 coverage run --source=src/lib, src/scripts -m pytest src/tests/unit_tests/
 coverage report
